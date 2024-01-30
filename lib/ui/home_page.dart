@@ -17,9 +17,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final controller = PageController(viewportFraction: 0.9, initialPage: 0);
   List<String> images = [
-    'assets/banner.jpg',
+    'assets/banner4.jpg',
     'assets/banner2.jpg',
-    'assets/banner3.jpg',
+    'assets/banner5.jpg',
   ];
 
   List<String> phoneImages = [
@@ -45,7 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-          actions: const [Icon(Icons.shopping_cart)],
+          actions: const [Icon(Icons.shopping_cart),
+          SizedBox(width:40)
+          ],
           title: const Text('Discover')),
       body: SingleChildScrollView(
         child: Padding(
@@ -65,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     itemBuilder: (BuildContext context, int index) {
                       return Stack(
+                      alignment: Alignment.bottomCenter,
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(right: 20),
@@ -76,11 +79,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           SmoothPageIndicator(
                             controller: controller,
                             count: images.length,
-                            effect: const WormEffect(
+                            effect:  WormEffect(
                               dotHeight: 8,
                               dotWidth: 8,
-                              activeDotColor: Colors.white,
-                              dotColor: Color(0xFFA7A6A6),
+                              activeDotColor: Colors.blue.shade800,
+                              dotColor: const Color(0xFFA7A6A6),
                               type: WormType.thinUnderground,
                             ),
                           ),
