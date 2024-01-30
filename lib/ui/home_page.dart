@@ -17,9 +17,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final controller = PageController(viewportFraction: 0.9, initialPage: 0);
   List<String> images = [
-    'assets/banner4.jpg',
     'assets/banner2.jpg',
     'assets/banner5.jpg',
+    'assets/banner4.jpg',
+
   ];
 
   List<String> phoneImages = [
@@ -45,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade800,
           actions: const [Icon(Icons.shopping_cart),
           SizedBox(width:40)
           ],

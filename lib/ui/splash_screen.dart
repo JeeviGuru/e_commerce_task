@@ -32,9 +32,10 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: ColorFiltered(
           colorFilter: ColorFilter.mode(Colors.blue.shade800, BlendMode.color),
-          child: Image.asset('assets/phone_image.jpeg',
-          height: 60,
-          width: 60,
+          child: Image.asset(
+            'assets/samsung.png',
+            height: 220,
+            width: 180,
           ),
         ),
       ),
